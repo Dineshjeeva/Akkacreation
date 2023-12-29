@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="AppHeader.css" />
+    <link rel="stylesheet" href="AppFooter.css" />
+    <link rel="stylesheet" href="AboutPage.css" />
+    <link
+      rel="stylesheet"
+      href="../pages/Home/HomepageProducts/TestimonialCard.css"
+    />
+
+    <title>About Page</title>
+  </head>
+
+  <body style="background-color: white">
+    <header>
+      <div class="header">
+        <div class="logo">
+          <a href="routes.HOME" onclick="handleMenuClick(routes.HOME)">
+            <img
+              src="Akka creartions horizontal 2-03-03.png"
+              alt="alterknit logo"
+            />
+          </a>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="Homepage.html" onclick="handleMenuClick('Homepage.html')"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="AboutPage.html"
+                onclick="handleMenuClick('AboutPage.html')"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="ProductPage.html"
+                onclick="handleMenuClick('ProductPage.html')"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="ContactPage.html"
+                onclick="handleMenuClick('ContactPage.html')"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <script>
+      // Check if the function is not already declared
+      if (typeof handleMenuClick !== "function") {
+        const handleMenuClick = (route) => {
+          console.log("Menu clicked:", route);
+        };
+      }
+      if (typeof header === "undefined") {
+        const header = document.querySelector(".header");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+      }
+    </script>
+    <div class="contact-banner">
+      <div class="content">
+        <h1 style="font-size: 80px">About Us</h1>
+      </div>
+    </div>
+    <div class="about-container">
+      <div class="image-container">
+        <img id="aboutImage" class="about-image" src="images" alt="about" />
+      </div>
+
+      <div class="text-container">
+        <h1 class="title">The story of AKKA CREATION in Mamallapuram</h1>
+        <div class="divider"></div>
+        <p class="description">
+          Akka! <br />
+          The power of colors! <br />
+          India's fashion for women sure of them and full of joie de vivre.
+          <br />
+          Made by women for women up to size 54 or over ..... <br />
+          Sensual, colorful and of high quality. Each piece is unique and the
+          AKKA look is <br />
+          recognizable. <br />
+          Fashion Mamallapuram, a small town in the Bay of Bengal that belongs
+          to the world cultural heritage. <br />
+          In 2005, after the devastating tsunami, Véronique Thomassin had the
+          idea to make fashion and accessories there and thus provide training
+          for women and girls in the village, create jobs and allow better
+          living conditions <br />
+          An idea that has been successfully developed and which, thanks to the
+          commitment of women, spreads the beauty of the colors of India
+          everywhere in the world <br />
+          Immerse yourself in this world full of colors and joie de vivre.
+          <br />
+          We welcome you on our site, and also in our shop and our workshop in
+          Mamallapuram.
+        </p>
+      </div>
+      <script>
+        const ImagesAboutSection = [
+          "../common-components/abt1.5f2f51799ea6752399cc.webp",
+          "../common-components/abt2.00ac5b14c8330f1c9113 (1).avif",
+        ];
+        let currentImageIndex = 0;
+
+        function updateImage() {
+          document.getElementById("aboutImage").src =
+            ImagesAboutSection[currentImageIndex];
+        }
+
+        function changeImage() {
+          currentImageIndex =
+            currentImageIndex === ImagesAboutSection.length - 1
+              ? 0
+              : currentImageIndex + 1;
+          updateImage();
+        }
+
+        updateImage(); // Initial image update
+
+        const intervalId = setInterval(changeImage, 3000); // Change image every 3 seconds
+
+        // Cleanup the interval on page unload
+        window.addEventListener("beforeunload", () => {
+          clearInterval(intervalId);
+        });
+
+        const handleMenuClick = (route) => {
+          console.log("Menu clicked:", route);
+        };
+
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+      </script>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        background-color: whitesmoke;
+        margin-bottom: 50px;
+        margin-top: 20px;
+      "
+    >
+      <div style="display: flex; flex-direction: column; margin-top: -87px">
+        <h2 class="happy">Happy Clients</h2>
+        <p class="customer">
+          We Care About Our Customers <br />
+          Experience Too
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            margin-left: 140px;
+            margin-top: 10px;
+          "
+        >
+          <img
+            style="width: 50px; height: 30px"
+            src="../common-components/reshot-icon-bold-arrow-left-TS2DVUZ9WY.svg"
+            alt=""
+          />
+          <img
+            style="width: 50px; height: 30px"
+            src="../common-components/reshot-icon-bold-arrow-right-RB7XW6DC4Z.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 3rem;
+          padding-bottom: 30px;
+          margin-top: -57px;
+        "
+      >
+        <figure class="snip1390">
+          <div style="display: flex; justify-content: center">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg"
+              alt="profile-sample3"
+              class="profile"
+            />
+          </div>
+          <div style="margin-top: 50px">
+            <h1 class="text">, ,</h1>
+            <p class="name">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              doeiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="yellow-star">&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="vision">Our Vision</div>
+          </div>
+          <figcaption></figcaption>
+        </figure>
+        <figure class="snip1390 hover">
+          <div style="display: flex; justify-content: center">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
+              alt="profile-sample5"
+              class="profile"
+            />
+          </div>
+          <div style="margin-top: 50px">
+            <h1 class="text">, ,</h1>
+            <p class="name">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              doeiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="yellow-star">&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="vision">Our Vision</div>
+            <figcaption></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="app-footer">
+      <div class="footer-container">
+        <div class="logo-container">
+          <a href="routes.HOME" onclick="handleMenuClick(routes.HOME)">
+            <img
+              src="Akka creartions horizontal 2-03-03.png"
+              alt="alterknit logo"
+            />
+          </a>
+          <p class="description">
+            <span style="color: black; font-weight: bold">AKKA CREATION</span>
+            in Mamallapuram. <br />
+            The power of colors! Fashion Mamallapuram, a small town in the Bay
+            of Bengal that belongs to the world cultural heritage
+          </p>
+        </div>
+
+        <div class="menu-container">
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.FABRIC_PRODUCT"
+              onclick="handleMenuClick(routes.FABRIC_PRODUCT)"
+              >Fabric</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.CLOTHING_PRODUCT"
+              onclick="handleMenuClick(routes.CLOTHING_PRODUCT)"
+              >Patterns</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.SIGNATURE_PRODUCT"
+              onclick="handleMenuClick(routes.SIGNATURE_PRODUCT)"
+              >Signature</a
+            >
+          </div>
+        </div>
+
+        <div class="menu-container">
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="Homepage.html"
+              onclick="handleMenuClick('Homepage.html')"
+              >Home</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="AboutPage.html"
+              onclick="handleMenuClick('AboutPage.html')"
+              >About</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="ProductPage.html"
+              onclick="handleMenuClick('ProductPage.html')"
+              >Products</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="ContactPage.html"
+              onclick="handleMenuClick('ContactPage.html')"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-container">
+          <p class="contact-item">contactat@akkacreation.com</p>
+          <p class="contact-item">Phone: +91 97910 68220</p>
+          <div style="border: 1px solid gray"></div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/login.php/" target="_blank"
+              ><span>&#xf09a;</span></a
+            >
+            <a href="https://www.instagram.com/akka_creation/" target="_blank"
+              ><span>&#xf16d;</span></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>copyright@2023 | All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+</html>

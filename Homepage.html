@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="AppHeader.css" />
+    <link rel="stylesheet" href="AppFooter.css" />
+    <link rel="stylesheet" href="Homebanner.css" />
+    <link rel="stylesheet" href="Aboutsection.css" />
+    <link rel="stylesheet" href="ImageGalary.css" />
+    <link
+      rel="stylesheet"
+      href="../pages/Home/HomepageProducts/TestimonialCard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../pages/Home/HomepageProducts/ProductCard.css"
+    />
+    <title>Home Page</title>
+  </head>
+
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a href="routes.HOME" onclick="handleMenuClick(routes.HOME)">
+          <img
+            src="Akka creartions horizontal 2-03-03.png"
+            alt="alterknit logo"
+          />
+        </a>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="Homepage.html" onclick="handleMenuClick('Homepage.html')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="AboutPage.html" onclick="handleMenuClick('AboutPage.html')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="ProductPage.html"
+              onclick="handleMenuClick('ProductPage.html')"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="ContactPage.html"
+              onclick="handleMenuClick('ContactPage.html')"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <body>
+    <script>
+      // Check if the function is not already declared
+      if (typeof handleMenuClick !== "function") {
+        const handleMenuClick = (route) => {
+          console.log("Menu clicked:", route);
+        };
+      }
+      if (typeof header === "undefined") {
+        const header = document.querySelector(".header");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+      }
+    </script>
+    <div class="banner"></div>
+
+    <div class="content-box">
+      <h1>Shopping as<br />you love</h1>
+      <p>
+        Shop in style, savings guaranteed. Unleash fashion-forward finds.
+        Explore now!
+      </p>
+      <a href="your-products-page.html" class="button">See what's on sale</a>
+    </div>
+
+    <!-- Add any additional content or scripts for the homepage here -->
+
+    <div class="about-section">
+      <div class="image-box">
+        <img
+          src="../pages/Home/HomepageProducts/Art_Exhibit_Blog_Banner-min_1.webp"
+          alt=""
+        />
+      </div>
+      <div class="text-box">
+        <h1 class="section-title">About Us</h1>
+        <p class="section-content">
+          A textile fabric is a material that has been either woven or non-woven
+          (knitted, tufted, knotted, or bonded). Textile fabrics can be made out
+          of natural fibers, meaning they are plant-based or animal-based, or
+          synthetic fibers, meaning humans manufacture them. Synthetic fabrics
+          are also known as artificial fabrics.
+        </p>
+        <div class="quote-box">
+          <p class="quote-text">
+            <span
+              style="margin-top: -9px; margin-left: -24px"
+              class="quote-symbol"
+              >“</span
+            >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            doeiusmod tempor incididunt ut labore et dolore magna aliqua.-
+            <span class="quote-author">Akka creations</span>
+          </p>
+        </div>
+        <button class="read-more-button">Read more</button>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <!-- Repeat the following block for each image -->
+      <div class="image-box hovered" id="fabricImageContainer">
+        <img src="../pages/Home/fabric.d.jpg" alt="" />
+        <div class="overlay">
+          <h2>Fabric</h2>
+        </div>
+      </div>
+
+      <div class="image-box hovered" id="patternImageContainer">
+        <img src="../pages//Home/patterns.jpg" alt="" />
+        <div class="overlay">
+          <h2>Patterns</h2>
+        </div>
+      </div>
+
+      <div class="image-box hovered" id="coloursImageContainer">
+        <img src="../pages/Home/colours.avif" alt="" />
+        <div class="overlay">
+          <h2>Colours</h2>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 90px">
+      <h1>PRODUCTS ON SALE</h1>
+    </div>
+
+ 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var fabricProductsSection = document.getElementById("fabricProductsSection");
+        var patternProductsSection = document.getElementById("patternProductsSection");
+        var coloursProductsSection = document.getElementById("coloursProductsSection");
+
+        
+        fabricProductsSection.style.display = "block";
+        patternProductsSection.style.display = "none";
+        coloursProductsSection.style.display = "none";
+
+    
+        var fabricImageContainer = document.getElementById("fabricImageContainer");
+        var patternImageContainer = document.getElementById("patternImageContainer");
+        var coloursImageContainer = document.getElementById("coloursImageContainer");
+
+        
+        fabricImageContainer.addEventListener("click", function () {
+          fabricProductsSection.style.display = "block";
+          patternProductsSection.style.display = "none";
+          coloursProductsSection.style.display = "none";
+
+        });
+    
+        patternImageContainer.addEventListener("click", function () {
+          patternProductsSection.style.display = "block";
+          fabricProductsSection.style.display = "none";
+          coloursProductsSection.style.display = "none";
+
+        });
+        coloursImageContainer.addEventListener("click", function () {
+          coloursProductsSection.style.display = "block";
+          patternProductsSection.style.display = "none";
+          fabricProductsSection.style.display = "none";
+
+        });
+      });
+    </script>
+    <section class="articles" id="fabricProductsSection">
+      <div class="fabricProductsSection">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../common-components/1.56ee3f0b3f0dbfd40708.webp" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>SANTE Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../common-components/2.1fa24b3b2fcf58e592cc.avif" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OU Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../common-components/3.ace71b9fcd4c50364f93.avif" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OS Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../common-components/sign1.83363a19fec4d94943cd.webp" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Robe Midi</h2>
+              </div>
+            </div>
+          </article>
+          <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../common-components/sign2.3f07aab39022c1986935.webp" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Kaftan Long Chudi</h2>
+              </div>
+            </div>
+          </article>
+        </article> 
+      </div>
+    </section> 
+
+    <section class="articles" id="patternProductsSection">
+      <div class="patternProductsSection">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/FloralAssets/big.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>SANTE Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/AbstractAssets/light blue shalimar.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OU Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/FloralAssets/BINDU FLOWER.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OS Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../assets/AviaryAssets/FLOWER SHAL PINK CANVAS (4).jpg" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Robe Midi</h2>
+              </div>
+            </div>
+          </article>
+          <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../assets/FloralAssets/bindu2.jpg" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Kaftan Long Chudi</h2>
+              </div>
+            </div>
+          </article>
+        </article> 
+      </div>
+    </section>
+    <section class="articles" id="coloursProductsSection">
+      <div class="coloursProductsSection">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/BlueProducts/2.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>SANTE Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/BlueProducts/4.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OU Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+          <div class="article-wrapper">
+            <figure>
+              <img style="width: 844px; height: 260px;" src="../assets/GreenProducts/6.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>OS Midi</h2>
+            </div>
+          </div>
+        </article>
+        <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../assets/GreenProducts/6.jpg" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Robe Midi</h2>
+              </div>
+            </div>
+          </article>
+          <article>
+      
+            <div class="article-wrapper">
+              <figure>
+                <img style="width: 844px; height: 260px;" src="../assets/RedProducts/11.jpg" alt="" />
+              </figure>
+              <div class="article-body">
+                <h2>Kaftan Long Chudi</h2>
+              </div>
+            </div>
+          </article>
+        </article> 
+      </div>
+    </section>
+    <div style="display: flex; justify-content: center; margin-top: 55px">
+      <a style="text-decoration: none" href="ProductPage.html" class="button">
+        More Products
+      </a>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        background-color: whitesmoke;
+        margin-top: 60px;
+        margin-bottom: 50px;
+      "
+    >
+      <div style="display: flex; flex-direction: column; margin-top: -87px">
+        <h2 class="happy">Happy Clients</h2>
+        <p class="customer">
+          We Care About Our Customers <br />
+          Experience Too
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            margin-left: 140px;
+            margin-top: 10px;
+          "
+        >
+          <img
+            style="width: 50px; height: 30px"
+            src="../common-components/reshot-icon-bold-arrow-left-TS2DVUZ9WY.svg"
+            alt=""
+          />
+          <img
+            style="width: 50px; height: 30px"
+            src="../common-components//reshot-icon-bold-arrow-right-RB7XW6DC4Z.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 3rem;
+          padding-bottom: 40px;
+          margin-top: -97px;
+        "
+      >
+        <figure class="snip1390">
+          <div style="display: flex; justify-content: center">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg"
+              alt="profile-sample3"
+              class="profile"
+            />
+          </div>
+          <div style="margin-top: 50px">
+            <h1 class="text">, ,</h1>
+            <p class="name">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              doeiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="yellow-star">&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="vision">Our Vision</div>
+          </div>
+          <figcaption></figcaption>
+        </figure>
+        <figure class="snip1390 hover">
+          <div style="display: flex; justify-content: center">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
+              alt="profile-sample5"
+              class="profile"
+            />
+          </div>
+          <div style="margin-top: 50px">
+            <h1 class="text">, ,</h1>
+            <p class="name">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              doeiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="yellow-star">&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="vision">Our Vision</div>
+            <figcaption></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+      "
+    >
+      <img
+        style="width: 50px; height: 30px"
+        src="../common-components/reshot-icon-bold-arrow-left-TS2DVUZ9WY.svg"
+        alt=""
+        onclick="moveCarousel('left')"
+      />
+      <div class="carousel-item" style="width: 200px; height: 190px; margin-top: 40px" class="box">
+        <img
+          style="
+            width: 199px;
+            height: 190px;
+            margin-top: -160px;
+            padding: 10px;
+            border-radius: 20px;
+          "
+          src="../common-components/1.56ee3f0b3f0dbfd40708.webp"
+          alt=""
+        />
+        <h3 style="font-size: 15px; text-align: center; padding-top: 25px">
+          SANTE Midi
+        </h3>
+      </div>
+      <div class="carousel-item" style="width: 230px; height: 220px; margin-top: 50px" class="box">
+        <img
+          style="
+            width: 229px;
+            height: 250px;
+            margin-top: -210px;
+            padding: 10px;
+            border-radius: 20px;
+          "
+          src="../common-components/2.1fa24b3b2fcf58e592cc.avif"
+          alt=""
+          id="image-carousel"
+        />
+        <h3 style="font-size: 15px; text-align: center; padding-top: 25px">
+          OU Midi
+        </h3>
+      </div>
+      <div class="carousel-item" style="width: 200px; height: 190px; margin-top: 40px" class="box">
+        <img
+          style="
+            width: 199px;
+            height: 190px;
+            margin-top: -160px;
+            padding: 10px;
+            border-radius: 20px;
+          "
+          src="../common-components/sign2.3f07aab39022c1986935.webp"
+          alt=""
+          id="image-carousel"
+        />
+        <h3 style="font-size: 15px; text-align: center; padding-top: 25px">
+          OS Midi
+        </h3>
+      </div>
+      <img
+        style="width: 50px; height: 30px"
+        src="../common-components//reshot-icon-bold-arrow-right-RB7XW6DC4Z.svg"
+        alt=""
+        onclick="moveCarousel('right')"
+        id="image-carousel"
+      />
+      <div style="display: flex; flex-direction: column">
+        <h4
+          style="
+            font-size: 23px;
+            color: #e53637;
+            margin-top: -50px;
+            margin-left: 70px;
+          "
+        >
+          Our Signature Products
+        </h4>
+        <h5
+          style="
+            font-size: 15px;
+            color: black;
+            margin-left: 70px;
+            width: 500px;
+            margin-top: 0px;
+          "
+        >
+          Style encompasses personal expression, reflecting taste in aesthetics,
+          fashion, and design, conveying individuality through choices in
+          appearance and presentation.
+        </h5>
+        <a href="ProductPage.html">
+          <button
+          class="read-more-button"
+            style="
+              background-color: black;
+              color: white;
+              width: 400px;
+              height: 40px;
+              border-radius: 5px;
+              margin-left: 75px;
+            "
+          >
+            Click to show more
+          </button>
+        </a>
+      </div>
+    </div>
+    <script>
+      let currentIndex = 0;
+      const totalItems = document.querySelectorAll('.carousel-item').length;
+      const itemWidth = 250; // Adjust this value based on your actual item width
+  
+      function moveCarousel(direction) {
+        const carousel = document.getElementById('image-carousel');
+  
+        if (direction === 'left' && currentIndex > 0) {
+          currentIndex--;
+        } else if (direction === 'right' && currentIndex < totalItems - 0) {
+          currentIndex++;
+        }
+  
+        const newPosition = -currentIndex * itemWidth;
+        carousel.style.transform = `translateX(${newPosition}px)`;
+      }
+    </script>
+  
+  </body>
+  <footer>
+    <div class="app-footer">
+      <div class="footer-container">
+        <div class="logo-container">
+          <a href="routes.HOME" onclick="handleMenuClick(routes.HOME)">
+            <img
+              src="Akka creartions horizontal 2-03-03.png"
+              alt="alterknit logo"
+            />
+          </a>
+          <p class="description">
+            <span style="color: black; font-weight: bold">AKKA CREATION</span>
+            in Mamallapuram. <br />
+            The power of colors! Fashion Mamallapuram, a small town in the Bay
+            of Bengal that belongs to the world cultural heritage
+          </p>
+        </div>
+
+        <div class="menu-container">
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.FABRIC_PRODUCT"
+              onclick="handleMenuClick(routes.FABRIC_PRODUCT)"
+              >Fabric</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.CLOTHING_PRODUCT"
+              onclick="handleMenuClick(routes.CLOTHING_PRODUCT)"
+              >Patterns</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              href="routes.SIGNATURE_PRODUCT"
+              onclick="handleMenuClick(routes.SIGNATURE_PRODUCT)"
+              >Signature</a
+            >
+          </div>
+        </div>
+
+        <div class="menu-container">
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="Homepage.html"
+              onclick="handleMenuClick('Homepage.html')"
+              >Home</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="AboutPage.html"
+              onclick="handleMenuClick('AboutPage.html')"
+              >About</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="ProductPage.html"
+              onclick="handleMenuClick('ProductPage.html')"
+              >Products</a
+            >
+          </div>
+          <div class="menu-item">
+            <span style="color: #ec4979">&#10148;</span>
+            <a
+              style="white-space: nowrap"
+              href="ContactPage.html"
+              onclick="handleMenuClick('ContactPage.html')"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-container">
+          <p class="contact-item">contactat@akkacreation.com</p>
+          <p class="contact-item">Phone: +91 97910 68220</p>
+          <div style="border: 1px solid gray"></div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/login.php/" target="_blank"
+              ><span>&#xf09a;</span></a
+            >
+            <a href="https://www.instagram.com/akka_creation/" target="_blank"
+              ><span>&#xf16d;</span></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>copyright@2023 | All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+</html>

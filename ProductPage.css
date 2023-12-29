@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans, sans-serif";
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: local("Nunito Sans"),
+    url("../assets/Nunito_Sans/static/NunitoSans_10pt_Condensed-Medium.ttf")
+      format("truetype");
+  font-weight: 300;
+}
+
+.contact-banner {
+  background-image: url("fabric_stack.jpg"); /* Replace with the path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.contact-banner .content {
+  color: black;
+  margin: auto;
+}
+
+.contact-banner h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+.products-left-side {
+  padding: 20px;
+  width: 20%;
+}
+
+.products-left-side .filter-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.products-left-side .filter-header h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.products-left-side .filter-header a {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.products-left-side .divider {
+  margin: 2px auto;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.products-left-side .category-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+.products-left-side .category-section1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.products-left-side .category-section h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.products-left-side .category-section1 h3 {
+  font-size: 15px;
+  font-weight: none;
+}
+
+.products-left-side .category-section .dropdown-icon {
+  cursor: pointer;
+}
+
+.products-left-side .filter-section {
+  padding: 20px 0;
+}
+
+.products-left-side .filter-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.products-left-side .filter-section select {
+  border-radius: 30px;
+  margin-top: 12px;
+  height: 42px;
+  width: 100%;
+}
+
+.products-left-side .color-filter-section {
+  padding: 20px 0;
+}
+
+.products-left-side .color-filter-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.products-left-side .color-filter-section .color-stack {
+  max-height: 300px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.products-left-side .color-filter-section .color-stack a {
+  text-decoration: none;
+}
+
+.products-left-side .color-filter-section .color-item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.products-left-side .color-filter-section .color-item:hover,
+.products-left-side .color-filter-section .color-item.selected {
+  background-color: #f0f0f0;
+}
+
+.products-left-side .color-filter-section .color-item .color-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.products-left-side
+  .color-filter-section
+  .color-item
+  .color-circle
+  .check-icon {
+  color: white;
+  font-size: 20px;
+}
+
+.products-left-side .color-filter-section .color-item .color-name {
+  font-family: "Nunito Sans, sans-serif";
+  font-size: 15px;
+  color: gray;
+}
+.check-icon {
+  position: absolute;
+  color: #f6f6f6;
+  left: 25px;
+}
+
+.category-section1 {
+  cursor: pointer;
+}
+.fabric-products {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+  gap: 1rem;
+}
+.sub-products {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.pattern-products {
+  padding: 0 35px;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.divider1 {
+  width: 10%;
+  height: 2px;
+  background-color: red;
+  margin: 10px 0;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  width: 300px;
+  height: 350px;
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+}
+
+.product-card img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-details h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.show-more-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  background-color: black;
+  color: white;
+  padding: 15px 50px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+  max-width: 250px;
+  width: 100%;
+}
+
+.show-more-btn:hover {
+  color: white;
+  background-color: #e53637;
+}
